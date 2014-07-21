@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Graphics for the Web</title>
+<link rel="stylesheet" href="../../media/style.css" /> 
+<link rel="stylesheet" href="../../media/bebas/stylesheet.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../media/TitilliumText/stylesheet.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../media/main.css" /> 
+<link rel="stylesheet" href="../../media/ie6.css" /> 
+</head>
+<body>
+<div id="header-wrap">
+	<div id="header-container">
+		<div id="header">
+			<h2>Graphics for the Web - Introduction</h2><h1>Why - Support</h1>
+			<ul>
+				<li><a href="./9.html">&nbsp;&lt;Prev</a></li>
+				<li><a href="../index.html">&nbsp;Home&nbsp;</a></li>
+				<li><a href="./10.html">Next&nbsp;&gt;</a></li>
+			</ul>
+		</div>
+			
+	</div>
+</div>
+
+<div id="ie6-container-wrap">
+	<div id="container">
+		<div id="content" class="content">	
+			<ul>		
+				<li>
+					<a href="http://mbostock.github.com/protovis/">Protovis</a> composes custom views of data with simple marks such as bars and dots. Unlike low-level graphics libraries that quickly become tedious for visualization, Protovis defines marks through dynamic properties that encode data, allowing inheritance, scales and layouts to simplify construction.               
+					<br><b>Works:</b> Firefox 3, Chrome and Safari 4
+					<br><b>Uses:</b> SVG
+				</li>
+			</ul>
+			<small>
+				<code>
+					<pre>
+	//example bargraph
+	var vis = new pv.Panel()
+	    .width(150)
+	    .height(150);
+
+	vis.add(pv.Bar)
+	    .data([1, 1.2, 1.7, 1.5, .7, .3])
+	    .width(20)
+	    .height(function(d) d * 80)
+	    .bottom(0)
+	    .left(function() this.index * 25);
+
+	vis.render();
+					</pre>
+				</code>
+			</small>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="footer-wrap">
+	<div id="footer-container">
+		<div id="footer">
+			<div id="credits">
+				<a href="http://thejeshgn.com/"><font color="#000">Thejesh</font>&nbsp;<font color="#83BE32">GN</font></a>
+			</div>
+			<ul>
+				<li><a href="http://thejeshgn.com/presentations/">Presentations</a></li>
+				<li><a href="http://code.thejeshgn.com/processing101/">Code</a></li>	
+				<li><a href="http://www.delicious.com/gnthej/processing101/">Links</a></li>	
+				<li><a href="http://thejeshgn.com/contact/">Contact</a></li>	
+
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

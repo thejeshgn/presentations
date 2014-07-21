@@ -1,0 +1,424 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Map Class</title>
+		<meta name='Generator' content='Zim 0.60'>
+		<style type='text/css'>
+			body     { background-color: #fff;
+			           color: #000;
+			           font-size: large              }
+			a        { text-decoration: none         }
+			a:hover  { text-decoration: underline    }
+			a:active { text-decoration: underline    }
+			strike   { color: grey                   }
+			u        { text-decoration: none;
+			           background-color: yellow      }
+			pre      { background-color: lightyellow }
+			.bar     { background-color: #E0E0FF;
+			           margin: 0                     }
+			.nav     { color: grey;
+			           font-size: small              }
+		</style>
+		<script type='text/javascript'>
+		<!--
+// Slideshow script - adapted from old kwiki package
+
+function nextSlide() {
+	window.location=""
+}
+
+function prevSlide() {
+	window.location=""
+}
+
+
+function handleKey(e) {
+	var key;
+	if (e == null) { // IE
+		key = event.keyCode
+	}
+	else { // Mozilla
+		if (e.altKey || e.ctrlKey) {
+			return true
+		}
+		key = e.which
+	}
+
+	switch(key) {
+		case 8: prevSlide(); break // Backspace
+		case 13: nextSlide(); break // Enter
+		case 32: nextSlide(); break // Space
+		default:
+	}
+
+	return false
+}
+
+document.onkeypress = handleKey
+// document.onclick = nextSlide
+// document.ondblclick = prevSlide
+
+// End slideshow script
+		// -->
+		</script>
+	</head>
+	<body>
+
+	<table width="100%" height="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td colspan="3" align="center" valign="middle" class="bar">
+				
+				<h3 class='bar'>Map Class</h3>
+				
+			</td>
+		</tr>
+		<tr>
+			<td width="5%">&nbsp;</td>
+			<td width="90%" height="90%" align="center" valign="top">
+
+				<table><tr><td align='left'>
+<!-- Wiki content -->
+
+<p>
+Created Wednesday 11 June 2014 by <a href="http://thejeshgn.com" title="Thejesh GN" class="http">Thejesh GN</a><br>
+</p>
+
+<p>
+I wrote this for my map class at NID, Bangalore. This was written using <a href="http://zim-wiki.org/" title="ZimWiki" class="http">ZimWiki</a> which is an awesome note making software.<br>
+</p>
+
+<h1>Contact</h1>
+
+<p>
+Email: <a href="mailto:i@thejeshgn.com" title="i@thejeshgn.com" class="mailto">i@thejeshgn.com</a><br>
+Web: <a href="http://thejeshgn.com" title="http://thejeshgn.com" class="http">http://thejeshgn.com</a><br>
+</p>
+
+<h1>Earth</h1>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Shape  </li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Theoretically</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Sphere </li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Effect of gravity and rotation </li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Spheroid or oblate ellipsoid</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">The equatorial diameter is nearly 1/300 longer than polar diameter</li>
+</ul>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Assuming surface has a constant radius, any point on it is uniquely identified using a polar two-coordinate system</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Selected parallels (in red) and meridians (in blue), here spaced 15° apart, comprise a spherical graticule.</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Longitude is measured from GMT, Latitude  from equator</li>
+</ul>
+<img src="./Map_Class/pasted_image001.png" alt=""><img src="./Map_Class/pasted_image.png" alt="">t <br>
+<a href="http://www.progonos.com/furuti/MapProj/Normal/CartDef/cartDef.html" title="courtesy" class="http">courtesy</a><br>
+</p>
+
+<h1>Representaion of Earth</h1>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Map is a Representaion   [ Globe(3d) to Map(2D) ]</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Projection - Conversion process and logic</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">A geodetic datum is a set of parameters (including axis lengths and offset from true center of the Earth) defining a reference ellipsoid. For each mapped region, a different datum can be carefully chosen so that it best matches average sea level, therefore terrain features.</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Maps are never free from errors</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Distance Measurement</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Location</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Area distortion</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Shapes</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Directions</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Mercator projection - cylindrical map projection</li>
+</ul>
+<div style='padding-left: 30pt'>
+<img src="./Map_Class/pasted_image002.png" alt=""><br>
+</div>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://epsg.io/4326" title="EPSG:4326" class="http">EPSG:4326</a> refers to WGS84 earth as an ellipsoid</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Has metric coordinates, uses lat and long</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Used by GPS</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">WGS84 Bounds: -180.0000, -90.0000, 180.0000, 90.0000</li>
+</ul>
+</ul>
+<div style='padding-left: 60pt'>
+ <img src="./Map_Class/4326_0.png" alt=""><br>
+</div>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">For example bangalore is</li>
+</ul>
+<div style='padding-left: 60pt'>
+<img src="./Map_Class/4326_1.png" alt=""><br>
+</div>
+</p>
+
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">EPSG:900913 (EPSG:3857) Web Mercator refers to WGS84 earth is sphere </li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Spherical mercator maps use an extent of the world from -180 to 180 longitude, and from -85.0511 to 85.0511 latitude</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Projection bounds -20026376.39 -20048966.10	20026376.39 20048966.10</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Initially by Google Maps for tiled maps</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://crschmidt.net/blog/archives/243/google-projection-900913/" title="Named" class="http">Named</a> by openlayers project - 'googlE' (substitute '9' for 'g' and squint a bit)</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Originally rejected by standards body, then accepted with 3857</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Used by OpenStreetMap and in general web</li>
+</ul>
+</ul>
+<div style='padding-left: 30pt'>
+<img src="./Map_Class/3857.png" alt=""><br>
+</div>
+</p>
+
+
+<h1>Data Type and Formats</h1>
+<p>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Raster</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Images JPEG2000, GeoTIFF</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Vector</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Point</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Line, MultiLine</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Polygon, Multipolygon</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Formats</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://en.wikipedia.org/wiki/Shapefile" title="ShapeFile" class="http">ShapeFile</a></li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">By ESRI</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Package .shp (shape), .shx(index), .dbf (attributes) </li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://en.wikipedia.org/wiki/Well-known_text" title="Well Known Text" class="http">Well Known Text</a> (WKT)</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Text format</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Eg: POINT (30 10), LINESTRING (30 10, 10 30, 40 40)</li>
+</ul>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Web-Formats</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">KML</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">GeoJSON/TopoJSON</li>
+</ul>
+</ul>
+</p>
+
+<h1>Maps Services</h1>
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Tiled map service</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">URI in REST</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Simpler than WMS</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Google, OpenStreetMaps, MapQuest (OSM) or MapBox (OSM), ESRI</li>
+</ul>
+</ul>
+</p>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Web Map Service</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">WMS</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Serves georeferenced map images</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Serves map in bitmap (PNG, GIF), Can also include vector maps like lines , served as SVG</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Example, like <a href="http://bhuvan.nrsc.gov.in" title="bhuwan" class="http">bhuwan</a> or <a href="http://openweathermap.org/api" title="open weather map" class="http">open weather map</a> for data</li>
+</ul>
+</ul>
+</p>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">SVG Based Maps</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://jvectormap.com/" title="Jvector Maps" class="http">Jvector Maps</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://polymaps.org/" title="Polymaps" class="http">Polymaps</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">You can manipulate the map the way you do SVG graphics</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Can be use in conjunction with TMS or can be used independently</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Works fine on modern web browsers</li>
+</ul>
+</ul>
+</p>
+
+
+<h1>Tools</h1>
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Desktop</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">QGIS</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">TillMill</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Web</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://geojson.io" title="GeoJSON.io" class="http">GeoJSON.io</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://leafletjs.com/" title="Web Map APIs - LeafLet" class="http">Web Map APIs - LeafLet</a> </li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Databases</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Spatial DB (mostly spatial lite)</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">PostGIS</li>
+</ul>
+</ul>
+</p>
+
+
+<h1>Available Data to experiment</h1>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Bangalore Data (Ward maps, BBMP election results, census data at BBMP level)</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">BMTC Data (Bus stops and routes)</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">BWSSB data (Water boundaries)</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">PC and AC data, Election results</li>
+</ul>
+</p>
+
+
+<h1>DO</h1>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><strong>Conversions</strong></li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Address to GeoCode</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://www.geonames.org/" title="GeoNames API" class="http">GeoNames API</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="https://www.mapbox.com/tilemill/docs/guides/google-docs/" title="In Google Docs" class="https">In Google Docs</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="https://developers.google.com/places/documentation/" title="Google Places API" class="https">Google Places API</a></li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">GeoCode to Address</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Raster to Vector</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://manual.linfiniti.com/en/complete_analysis/raster_to_vector.html" title="Raster to Vector" class="http">Raster to Vector</a> is straight forward if the raster image has gis info ex: GeoTiff</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="http://www.qgistutorials.com/en/docs/georeferencing_basics.html" title="GeoReferecing" class="http">GeoReferecing</a> </li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Vector to Raster</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Vector to Raster is easy</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Expore different type of map file formats and conversions within QGIS or on web</li>
+</ul>
+</ul>
+</p>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><strong>With</strong> <strong>QGIS or Leaflet</strong></li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><a href="https://github.com/openbangalore/bangalore-heatmap" title="Simple Choropleth" class="https">Simple Choropleth</a> or On <a href="https://github.com/thejeshgn/bangalore_choropleth" title="Google Maps" class="https">Google Maps</a> or <a href="http://leafletjs.com/examples/choropleth.html" title="On Leaflet" class="http">On Leaflet</a> </li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Plotting points, lines and polygons </li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">HeatMap <a href="http://www.qgistutorials.com/en/docs/creating_heatmaps.html" title="QGIS" class="http">QGIS</a> or Leaflet  <a href="https://github.com/openbangalore/bmtc/tree/master/visualization" title="BBMP maps" class="https">BBMP maps</a> or </li>
+</ul>
+</ul>
+</p>
+
+<p>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)"><strong>GIS DB &amp; GIS functions</strong></li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Find center of Polygons</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Go to the menu -&gt; Vector -&gt; Geometry tools -&gt; polygon centroid and create a centroid point layer</li>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Find if a point is inside a polygon (which ward do i belong)</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Intersect between points layer polygon layer</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Join attributes by location</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Add polygon attributes to points</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Terraformer JS script </li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">SpatialLite DB  (spatialite_gui)</li>
+</ul>
+</ul>
+</ul>
+<div style='padding-left: 90pt'>
+<code>select * from BBMP_wards_2011_region where  ST_Within(ST_GeomFromText("POINT(77.59456269966904 12.971598700795482)"),Geometry)</code><br>
+</div>
+<ul>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Difference between layers</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Old BBMP</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">New BBMP</li>
+</ul>
+</ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Intersection (common area)</li>
+<ul>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">BBMP</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Pincode</li>
+</ul>
+</ul>
+</p>
+
+<h1>Reading List</h1>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">M.Sc. GIS Lecture Notes <a href="http://www.nuim.ie/staff/dpringle/gis/lectures.shtml" title="http://www.nuim.ie/staff/dpringle/gis/lectures.shtml" class="http">http://www.nuim.ie/staff/dpringle/gis/lectures.shtml</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Geospatial Modeling and Analysis <a href="http://courses.ncsu.edu/mea582/common/GIS_anal_lecture/GIS_Anal_Lectall.html" title="http://courses.ncsu.edu/mea582/common/GIS_anal_lecture/GIS_Anal_Lectall.html" class="http">http://courses.ncsu.edu/mea582/common/GIS_anal_lecture/GIS_Anal_Lectall.html</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Cartographical Map Projections <a href="http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html" title="http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html" class="http">http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">So you want to make a map... <a href="https://github.com/veltman/learninglunches/tree/master/maps" title="https://github.com/veltman/learninglunches/tree/master/maps" class="https">https://github.com/veltman/learninglunches/tree/master/maps</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">A simple and lightweight framework for creating beautiful, interactive vector maps. <a href="http://kartograph.org/" title="http://kartograph.org/" class="http">http://kartograph.org/</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Tiled Map Servers, <a href="http://www.liedman.net/tiled-maps/" title="http://www.liedman.net/tiled-maps/" class="http">http://www.liedman.net/tiled-maps/</a> </li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Projections <a href="http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html" title="http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html" class="http">http://www.progonos.com/furuti/MapProj/Normal/TOC/cartTOC.html</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Find user longitude and laltitude with out instruments <a href="http://www.pbs.org/weta/roughscience/series1/challenges/latlong/" title="http://www.pbs.org/weta/roughscience/series1/challenges/latlong/" class="http">http://www.pbs.org/weta/roughscience/series1/challenges/latlong/</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Finding longitude <a href="http://astro.unl.edu/naap/motion1/tc_finding.html" title="http://astro.unl.edu/naap/motion1/tc_finding.html" class="http">http://astro.unl.edu/naap/motion1/tc_finding.html</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Free and Open Source GIS Ramblings <a href="http://anitagraser.com/" title="http://anitagraser.com/" class="http">http://anitagraser.com/</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Map Compare <a href="http://mc.bbbike.org/mc/?num=2&mt0=mapnik&mt1=toner" title="http://mc.bbbike.org/mc/?num=2&amp;mt0=mapnik&amp;mt1=toner" class="http">http://mc.bbbike.org/mc/?num=2&amp;mt0=mapnik&amp;mt1=toner</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Bangalore Open Data Repository is repository of data, code and related artifacts <a href="http://openbangalore.org/" title="http://openbangalore.org/" class="http">http://openbangalore.org/</a></li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Awesome plugins for leaflet <a href="http://leafletjs.com/plugins.html" title="http://leafletjs.com/plugins.html" class="http">http://leafletjs.com/plugins.html</a></li>
+</ul>
+</p>
+
+<h1>Contributing back to GIS community</h1>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">OSM</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Field Maps</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Datameet is a community of Data Science and Open Data enthusiasts. <a href="http://DataMeet.org" title="http://DataMeet.org" class="http">http://DataMeet.org</a> </li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">GeoBLR: Bangalore's Spatial Gathering <a href="http://GeoBlr.in" title="http://GeoBlr.in" class="http">http://GeoBlr.in</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+</ul>
+</p>
+
+
+<h1>Plan</h1>
+<p>
+<ul style='padding-left: 30pt'>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Ask them what they want to know or do ❄</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Ask them what they already know ❄</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Map what they want to know   ↔  what you are going to cover</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Class</li>
+<li style="list-style-image: url(file:///usr/share/zim/pixmaps/unchecked-box.png)">Point to resources for the extra/uncovered points</li>
+</ul>
+</p>
+
+
+<!-- End wiki content -->
+
+				</tr></td></table>
+
+			</td>
+			<td width="5%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center" valign="middle">
+									<span class="nav">&lt;</span>
+
+				<a href='' class="nav">+</a>
+
+									<span class="nav">&gt;</span>
+			</td>
+		</tr>
+	</table>
+
+	</body>
+
+</html>

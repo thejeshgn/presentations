@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Graphics for the Web</title>
+<link rel="stylesheet" href="../media/style.css" /> 
+<link rel="stylesheet" href="../media/main.css" /> 
+<link rel="stylesheet" href="../media/ie6.css" /> 
+<link rel="stylesheet" href="../media/bebas/stylesheet.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../media/bebas/stylesheet.css" type="text/css" charset="utf-8">
+<SCRIPT src="./media/js/processing-1.2.1.min.js"></SCRIPT>
+<SCRIPT src="./media/js/init.js"></SCRIPT>
+<SCRIPT type="application/processing" target="gameoflife">
+  /*Red_Yellow_Animation by Aaron J Stevens  , licensed under Creative Commons Attribution-Share Alike 3.0 and GNU GPL license. Work: http://openprocessing.org/visuals/?visualID= 58601    
+          */
+            int i;
+             
+            void setup(){
+              size(1200,500);
+              smooth();
+              background(255);
+             
+            }
+             
+            void draw(){
+               for (int i = 0; i<width; i+=10){
+                noFill();
+                strokeWeight(1);
+                 
+                 
+                stroke(234,i,35,50);
+                ellipse(350,270, random(i*5), random(i*5));
+                ellipse(150,150, random(i*5), random(i*5));
+                ellipse(500,500, random(i*5), random(i*5));
+                 
+                stroke(100,i,230,13);
+                rect(200,350, random(i*2), random(i*2));
+                  rect(100,100, random(i*3), random(i*2));
+                
+            }
+            }
+</SCRIPT>
+<body>
+<div id="header-wrap">
+	<div id="header-container">
+		<div id="header">
+			<h2>Graphics for the Web</h2><h1>Welcome</h1>
+			<ul>
+				<li><a href="./index.html">Modules</a></li>				
+				<li><a href="./module1/0.html">1</a></li>
+			</ul>
+		</div>
+			
+	</div>
+</div>
+
+<div id="ie6-container-wrap">
+	<div id="container">
+				<CANVAS id="gameoflife" tabindex="0" style="image-rendering: optimizequality !important; z-index:-1"  width="600" height="300"></CANVAS>	
+	</div>
+
+</div>
+
+<div id="footer-wrap">
+	<div id="footer-container">
+		<div id="footer">
+			<div id="credits">
+				<a href="http://thejeshgn.com/"><font color="#000">Thejesh</font>&nbsp;<font color="#83BE32">GN</font></a>
+			</div>
+			<ul>
+				<li><a href="http://thejeshgn.com/presentations/">Presentations</a></li>
+				<li><a href="http://code.thejeshgn.com">Code</a></li>	
+				<li><a href="http://thej.in/?author=3">Links</a></li>	
+				<li><a href="http://thejeshgn.com/contact/">Contact</a></li>	
+
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
