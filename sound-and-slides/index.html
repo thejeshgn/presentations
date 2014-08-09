@@ -167,6 +167,7 @@
             pop.code({
                     start: 3,
                     onStart: function (options) {
+                        console.log("move slide");
                         Reveal.slide(1);
                     }
                 });
@@ -174,6 +175,7 @@
             pop.code({
                     start: 6,
                     onStart: function (options) {
+                        console.log("move slide");
                         Reveal.slide(2);
                     }
                 });
@@ -182,6 +184,7 @@
             pop.code({
                     start: 30,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(3);
                     }
                 });
@@ -190,6 +193,7 @@
             pop.code({
                     start: 41,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(4);
                     }
                 });
@@ -198,6 +202,7 @@
             pop.code({
                     start: 51,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(5);
                     }
                 });
@@ -205,6 +210,7 @@
             pop.code({
                     start: 62,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(6);
                     }
                 });
@@ -212,6 +218,7 @@
             pop.code({
                     start: 74,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(7);
                     }
                 });
@@ -221,6 +228,7 @@
             pop.code({
                     start: 90,
                     onStart: function (options) {
+                        console.log("move slide");                        
                         Reveal.slide(8);
                     }
                 });
@@ -231,6 +239,7 @@
 
             Reveal.addEventListener( 'slidechanged', function( event ) {
                 // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                console.log("seek audio for");
                 console.log(event.indexh);
                 switch(event.indexh) {
                     case 1:
