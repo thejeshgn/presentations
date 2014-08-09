@@ -229,6 +229,43 @@
 
               });
 
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                console.log(event.indexh);
+                switch(event.indexh) {
+                    case 1:
+                        pop.play(3);
+                        break;
+                    case 2:
+                        pop.play(6);
+                        break;
+                    case 3:
+                        pop.play(30);
+                        break;
+                    case 4:
+                        pop.play(41);
+                        break;
+                    case 5:
+                        pop.play(51);
+                        break;
+                    case 6:
+                        pop.play(62);
+                        break;
+                    case 7:
+                        pop.play(74);
+                        break;
+                    case 8:
+                        pop.play(90);
+                        break;
+
+                    default:
+                        pop.play(0);
+
+                }
+
+
+            } );
+
 
         </script>
 
