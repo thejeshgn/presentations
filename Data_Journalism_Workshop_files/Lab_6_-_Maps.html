@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Lab 6 - Maps</title>
+    
+	<meta name="generator" content="Zim 0.62 & the Ecodiv-responsive template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script type='text/javascript' src="./_resources/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./_resources/style.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="./_resources/style1.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px) and (min-width:1000px)" href="./_resources/style2.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width: 999px) and (min-width:750px)" href="./_resources/style3.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="./_resources/style4.css" type="text/css">      
+</head>
+<body>    
+	<div class="wrapper">
+ 
+    <!--Collapsable menu-->    
+        <div id="taskbar" style="color:#3D6E0F; font-weight:500;">
+            <div id="menuicon">
+                <a href="#" class="toggler" style="color:#CE5C00; text-decoration:none; line-height: 2em;"><img src="./_resources/menu.png" height="19" alt="Menu"></a>
+            </div>
+            <div id="list">
+                <div id="navigation">
+                    <!-- To add additional links above the navigation menu, replace the link below with your link and remove comment tags
+                    If you do, you may want to remove the extra line above the index -->
+                    <!--
+                    <p style="padding-left:20px; margin-bottom:0px"><a href="http://thejeshgn.com">Thejesh GN</a></p>
+                    -->
+                    <p></p>
+                    <ul>
+<li><a href="./Lab_1_-_Data_Finding.html" title="Lab 1 - Data Finding" class="page">Lab 1 - Data Finding</a></li>
+<li><a href="./Lab_2_-_Data_Collecting.html" title="Lab 2 - Data Collecting" class="page">Lab 2 - Data Collecting</a></li>
+<li><a href="./Lab_3_-_Data_Cleaning_and_Validating.html" title="Lab 3 - Data Cleaning and Validating" class="page">Lab 3 - Data Cleaning and Validating</a></li>
+<li><a href="./Lab_4_-_Data_Analysis.html" title="Lab 4 - Data Analysis" class="page">Lab 4 - Data Analysis</a></li>
+<li><a href="./Lab_5_-_Graphs.html" title="Lab 5 - Graphs" class="page">Lab 5 - Graphs</a></li>
+<li><b>Lab 6 - Maps</b></li>
+<li><a href="./Lab_7_-_Data_Copyright_and_Licenses.html" title="Lab 7 - Data Copyright and Licenses" class="page">Lab 7 - Data Copyright and Licenses</a></li>
+<li><a href="./Lab_8_-_Sharing_Data.html" title="Lab 8 - Sharing Data" class="page">Lab 8 - Sharing Data</a></li>
+<li><a href="./Lab_9_-_Collaborating.html" title="Lab 9 - Collaborating" class="page">Lab 9 - Collaborating</a></li>
+</ul>
+
+                    <p></p>
+                    <!-- Warning message if java script is disabled -->
+                    <noscript>
+                        <div style="padding: 10px">
+                            <span style="color:#D48D8D"><p>Please note</p>
+                            <p>To hide the menu</p>
+                            <p>you need to enable</p>
+                            <p>Java script</p></span>
+                        </div>
+                    </noscript>
+                </div>
+            </div>
+        </div>
+        <div id="block">
+            <div id="content">
+                <h1><img src="https://thejeshgn.com/presentations/ground.png" width="5%"/>Lab 6 - Maps <a name='Workshops:Data Journalism Workshop:Lab 6 - Maps'></a></h1>
+                
+                <p>
+Created Monday 17 November 2014 - <a href="http://thejeshgn.com/presentations/Data_Journalism_Workshop.html" title="Lab Home" class="http">Lab Home</a>
+</p>
+
+<p>
+I have complete <a href="http://thejeshgn.com/presentations/Map_Class.html" title="MapClass101 course available online" class="http">MapClass101 course available online</a>. If you like to learn basics of geography and maps, I suggest you to go there and learn. This lab looks at the readily available, web based tools that can be used to create, embed or export the maps. <br>
+<ul>
+<li class="checked-box">Simple points on the map</li>
+<li class="checked-box">Simple tracks on the map</li>
+<li class="checked-box">Choropleth maps</li>
+<li class="checked-box">Map based stories</li>
+<li class="checked-box">Time and Map based stories</li>
+</ul>
+</p>
+
+<h2>Sample Exercise Questions</h2>
+
+<p>
+<ul>
+<li class="unchecked-box">Map the road under works, under TenderSure</li>
+<li class="unchecked-box">Map the POIs of sex crimes in Bangalore</li>
+<li class="unchecked-box">Map the Election results of BBMP</li>
+<li class="unchecked-box">Make a story of Baapu's Dandi March</li>
+</ul>
+</p>
+
+<h2>Example Data Sets for Lab</h2>
+
+<p>
+<ul>
+<li class="unchecked-box">BBMP 2010 <a href="http://code.thejeshgn.com/bangalore/raw/tip/Election/BBMP/Bangalore_BBMP_2010_results.csv" title="Election Results" class="http">Election Results</a> as CSV</li>
+<li class="unchecked-box">BBMP <a href="https://raw.githubusercontent.com/openbangalore/bangalore/master/bangalore/GIS/BBMP_Wards_2011_region.json" title="Ward Map" class="https">Ward Map</a> as GeoJSON</li>
+<li class="unchecked-box">Bangalore <a href="https://github.com/openbangalore/bangalore/raw/master/bangalore/GIS/bangalore_pincode.json" title="Pincode Boundaries" class="https">Pincode Boundaries</a></li>
+<li class="unchecked-box">BMTC <a href="https://github.com/openbangalore/bmtc/blob/master/data/bmtc_bus_stops_with_location_details_2012.csv" title="Bus Stops" class="https">Bus Stops</a></li>
+</ul>
+</p>
+
+<h2>Tools</h2>
+
+<h3>Google Map Engine</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="https://mapsengine.google.com" title="https://mapsengine.google.com" class="https">https://mapsengine.google.com</a></li>
+<li class="unchecked-box">Create and share custom Google Maps</li>
+<li class="unchecked-box">Add Layers with POI, Paths, Areas etc</li>
+<li class="unchecked-box">Import Shape Files, KML, CSV etc</li>
+<li class="unchecked-box">Export Layers as KML</li>
+<li class="unchecked-box">Options for Google Maps based various base Maps</li>
+</ul>
+<img src="./Lab_6_-_Maps/google_map_engine.png" width="600">
+</p>
+
+<h3>CartoDB</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="https://cartodb.com/" title="https://cartodb.com/" class="https">https://cartodb.com/</a></li>
+<li class="unchecked-box">Import data from CSV, json, shapefiles</li>
+<li class="unchecked-box">Do data/geographic analysis</li>
+<li class="unchecked-box">Create visualizations easily</li>
+<li class="unchecked-box">Embed it on your website</li>
+</ul>
+<img src="./Lab_6_-_Maps/cartodb.png" width="600">
+</p>
+
+<h3>Odyssey</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="http://cartodb.github.io/odyssey.js/index.html" title="http://cartodb.github.io/odyssey.js/index.html" class="http">http://cartodb.github.io/odyssey.js/index.html</a></li>
+<li class="unchecked-box">A simple way for journalists, designers,and creators to weave interactive stories</li>
+<li class="unchecked-box">POI based story-lines</li>
+<li class="unchecked-box">Slides, Scrolls and Time based flows</li>
+<li class="unchecked-box">Customizable Theme</li>
+<li class="unchecked-box">Host the html on your own server or embed</li>
+</ul>
+<img src="./Lab_6_-_Maps/odyssey.png" width="600">
+</p>
+
+<h3>TimeMapper</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="http://timemapper.okfnlabs.org/" title="http://timemapper.okfnlabs.org/" class="http">http://timemapper.okfnlabs.org/</a></li>
+<li class="unchecked-box">Elegant timelines with POIs on maps </li>
+<li class="unchecked-box">Edit the template Google Spreadsheet with time, media and location</li>
+<li class="unchecked-box">Embed it on your website</li>
+</ul>
+<img src="./Lab_6_-_Maps/timemapper.png" width="600">
+</p>
+
+<h3>geocommons</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="http://geocommons.com/" title="http://geocommons.com/" class="http">http://geocommons.com/</a></li>
+<li class="unchecked-box">Visualizations</li>
+<li class="unchecked-box">GeoIQ for Analytics </li>
+<li class="unchecked-box">Embed, Export</li>
+</ul>
+<img src="./Lab_6_-_Maps/geocommons.png" width="600">
+</p>
+
+<h3>Other Tools</h3>
+
+<p>
+<ul>
+<li class="unchecked-box"><a href="http://geojson.io/" title="GeoJSON.IO" class="http">GeoJSON.IO</a> - Create and Edit GeoJSONs easily and export it to various other formats like KML, TopoJSON, Shape Files etc</li>
+<li class="unchecked-box"><a href="http://ogre.adc4gis.com/" title="OGRE" class="http">OGRE</a> - Covert between various geographic file formats like KML, TopoJSON, Shape Files etc to GeoJSON</li>
+<li class="unchecked-box"><a href="http://geojsonlint.com/" title="GeoJSONLint" class="http">GeoJSONLint</a> - Validate and View your GeoJSON files</li>
+</ul>
+</p>
+
+
+                <br>
+                <span class="backlinks">
+                </span>
+                
+                
+                
+            
+                <div id='footer'>
+                    <p><a href='https://thejeshgn.com/terms-and-conditions/'>Terms & Conditions</a> <img src="https://thejeshgn.com/presentations/ground.png" width="2%"/> <a href='http://thejeshgn.com/'>Thejesh GN</a><p>
+                </div>
+            </div>
+        </div>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-51179-6']);
+  _gaq.push(['_setDomainName', '.thejeshgn.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

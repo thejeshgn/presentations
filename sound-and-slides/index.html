@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Sound and Slides show</title>
+
+        <meta name="description" content="Using Reveal and popcorn together">
+        <meta name="author" content="Thejesh GN">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="../media/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../media/revealjs/css/reveal.min.css">
+        <link rel="stylesheet" href="../media/revealjs/css/theme/solarized.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../media/revealjs/lib/css/zenburn.css">
+        <script src="../media/js/jquery-1.4.4.js"></script>  
+        <script src="../media/js/popcorn-complete.js"></script>
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '../media/revealjs/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+        .localimg{
+            border:0px;
+            box-shadow:0 0 0px;
+        }
+        .reveal i.fa { font-family:FontAwesome; font-style: normal; }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <div class="icon-bar">
+                <p>&nbsp;<a href="http://thejeshgn.com" target="_new"><img src="../media/images/ground.png" width="25px" /></a></small>
+                <audio id="audio_notes" preload="auto" autobuffer controls >
+                    <source src="sound-and-slides.mp3" type="audio/mp3">
+                    <source src="sound-and-slides.ogg" type="audio/ogg">
+                </audio>
+                </p>
+            </div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h2>Heads Up - Play Audio on Top</h2>
+                    <p>
+                       Play that audio on top left and wait for the things to happen automagically.
+                    </p>
+                </section>
+
+                <section>
+                    <h1>Welcome Sound and Slides show</h1>
+                </section>
+
+                <section>
+                    <h2>Who am I?</h2>
+                    <p>
+                        I am <a href="http://thejeshgn.com">Thejesh GN</a>, Technologist from Bangalore.
+                    </p>
+                    <p>
+                        Co-founder of <a href="http://datameet.org">DataMeet</a> and Architect at <a href="http://myswar.com">Mavrix</a>.
+                    </p>
+                    <p>
+                        At some point I have worked for <a href="http://nextdrop.org">NextDrop</a>, A Political Campaign, <a href="http://www.indiawaterportal.org/">IWP</a>, Infosys etc
+                    </p>
+                    <p>
+                        <a href="http://twitter.com/thej"><i class="fa fa-twitter"></i></a>&nbsp;<a href="http://instagram.com/thejeshgn"><i class="fa fa-camera-retro"></i>&nbsp;<a href="http://thejeshgn.com"><i class="fa fa-wordpress"></i></a>
+                    </p>
+                </section>
+ 
+                <section>
+                    <h2>Experiment</h2>
+                    <p>
+                       This is an experiment to sync sound with slides.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Possible</h2>
+                    <p>
+                      By bringing together Reveal.js and PopCorn.js
+                    </p>
+                </section>     
+
+               <section>
+                    <h2>Reveal.js</h2>
+                    <p>
+                      The HTML5 Presentation Framework. Its available on <a href="https://github.com/hakimel/reveal.js">GitHub</a>
+                    </p>
+                </section>  
+
+               <section>
+                    <h2>Popcorn.js</h2>
+                    <p>
+                      The HTML5 Media Framework. Visit <a href="http://popcornjs.org/">popcornjs.org</a>
+                    </p>
+                </section>  
+
+               <section>
+                    <h2>Example</h2>
+                    <p>
+                      This presentation itself is an example. Code for this presentation is on 
+                      <a href="https://github.com/thejeshgn/presentations">GitHub</a>
+                    </p>
+                </section>  
+
+                <section>
+                    <h1>Thank You</h1>
+                    <h3>BY Thejesh GN / <a href="http://thejeshgn.com">thejeshgn.com</a></h3>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="../media/revealjs/lib/js/head.min.js"></script>
+        <script src="../media/revealjs/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            rev = Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../media/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../media/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../media/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../media/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../media/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../media/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+            var pop = Popcorn("#audio_notes");
+            $(function () {
+
+
+            pop.code({
+                    start: 3,
+                    onStart: function (options) {
+                        console.log("move slide");
+                        Reveal.slide(1);
+                    }
+                });
+
+            pop.code({
+                    start: 6,
+                    onStart: function (options) {
+                        console.log("move slide");
+                        Reveal.slide(2);
+                    }
+                });
+
+
+            pop.code({
+                    start: 30,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(3);
+                    }
+                });
+
+
+            pop.code({
+                    start: 41,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(4);
+                    }
+                });
+
+
+            pop.code({
+                    start: 51,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(5);
+                    }
+                });
+
+            pop.code({
+                    start: 62,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(6);
+                    }
+                });
+
+            pop.code({
+                    start: 74,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(7);
+                    }
+                });
+
+
+
+            pop.code({
+                    start: 90,
+                    onStart: function (options) {
+                        console.log("move slide");                        
+                        Reveal.slide(8);
+                    }
+                });
+
+
+
+              });
+
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                console.log("seek audio for");
+                console.log(event.indexh);
+                switch(event.indexh) {
+                    case 1:
+                        pop.play(3);
+                        break;
+                    case 2:
+                        pop.play(6);
+                        break;
+                    case 3:
+                        pop.play(30);
+                        break;
+                    case 4:
+                        pop.play(41);
+                        break;
+                    case 5:
+                        pop.play(51);
+                        break;
+                    case 6:
+                        pop.play(62);
+                        break;
+                    case 7:
+                        pop.play(74);
+                        break;
+                    case 8:
+                        pop.play(90);
+                        break;
+
+                    default:
+                        pop.play(0);
+
+                }
+
+
+            } );
+
+
+        </script>
+
+    </body>
+</html>
