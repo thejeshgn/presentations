@@ -187,7 +187,7 @@ Raphael
 					          <h2>Solution</h2>
 					          <ol>
 					          <li> Allow creators to communicate to middleman</li>
-					          <li> Middleman will publish the data and provide searh engine</li>
+					          <li> Middleman will publish the metadata and provide search engine</li>
 					          <li> Users will use search engine</li>
 					          </ol>
 				        </section>
@@ -197,8 +197,8 @@ Raphael
 				        <section>
 					          <h2>Not really</h2>
 					          <ul>
-					            <li> Format for communicating metadata - OpenData.json - Similar to Google sitemap, but json
-					            <li> Way to receive the that - Standard Ping (used by Google, Wordpress etc)
+					            <li> Format for communicating metadata 
+					            <li> Way to receive the that  programatically 
 					            <li> Many things to Research
 					            <li> Many things to Build
 					          </ul>
@@ -214,10 +214,12 @@ Raphael
 				        <section>
 					        <h2>Research</h2>
 					          <ul>
-					            <li> Put the idea infront of the world - <a href="https://thejeshgn.com/2014/11/27/opendata-json-format-for-making-open-data-discoverable/">opendata.json – Format for making Open Data Discoverable</a></li>
-					            <li> Similar projects by US Gov, OK etc</li>
-					            <li> Adopt or start from the scratch - Clone or Fork FOSS way - Reuse - Discussions on <a href="https://datameet.hackpad.com/opendata.json-cxod9ZH44Hl">Hackpad</a></li>
-					            <li> Standard Vocabulary by GoI </li>
+					            <li>Put the idea in-front of the world - <a href="https://thejeshgn.com/2014/11/27/opendata-json-format-for-making-open-data-discoverable/">opendata.json – Format for making Open Data Discoverable</a></li>
+					            <li>Similar projects by US Gov, OK etc</li>
+					            <li>Adopt or start from the scratch - Clone or Fork FOSS way - Reuse - Discussions on <a href="https://datameet.hackpad.com/opendata.json-cxod9ZH44Hl">Hackpad</a></li>
+					            <li>Standard Vocabulary by GoI </li>
+					            <li>Way to receive the that - Standard Ping (used by Google, Wordpress etc)</li>
+					            <li>Build when required else reuse </li>
 					          </ul>
 				        </section>
 				        <section>
@@ -236,14 +238,14 @@ Raphael
 				          </section>
 
 				        <section>
-				        <h2>System</h2>
+				        <h2>Quest System</h2>
 				        <img src="quest.png" />
 				        </section>
 				        <section>
 				        <h2>Creator</h2>
 					            <ul>
 					            <li>Purpose: Make it easy for the data publishers to create JSON files</li>	
-					            <li>Online form based system to create the JSON files, like</li>
+					            <li>Online form based system to create the JSON files</li>
 					            <li>Offline - Excel based form to create the JSON files</li>
 					            <li>Python and/or PHP libraries to include as part of your services </li>
 					            </ui>
@@ -254,7 +256,7 @@ Raphael
 					            <li>Purpose: Make it easy for the data publishers to validate JSON files</li>	
 					            <li>Online form based system to validate the JSON files</li>
 					            <li>API End point to receive and validate the JSON</li>
-					            <li>Python and/or PHP libraries to include as part of your services </li>
+					            <li>Python and/or PHP libraries to include as part of publisher's services </li>
 					            </ui>
 				        </section>
 				        <section>
@@ -269,14 +271,19 @@ Raphael
 				       <section>
 					        <h2>Analyzer</h2>
 					            <ul>
-						            <li>Purpose: Inernal, once you receive the file, analyze and insert into DB</li>	
+						            <li>Purpose: Internal, once you receive the file, analyze and insert into DB</li>	
+						            <li>Analyze the metadata</li>
+						            <li>Check for spam and other rules</li>
+						            <li>Insert into DB for later use and display</li>
+						            <li>Build index for search</li>
 					            </ui>
 				        </section>
 				       <section>
-				        <h2>Publish</h2>
+				        <h2>Publish/View</h2>
 					            <ul>
 						            <li>Purpose: Make it easy for the users to view catalog, dataset</li>	
-						            <li>Online, UI based</li>	
+						            <li>Online, UI based</li>
+						            <li>API</li>	
 					            </ui>				        
 				        </section>
 				        <section>
@@ -302,9 +309,10 @@ Raphael
 					<h2>Contribute</h2>
 			  		<ul>
 					            <li>Writing code, <a href="https://github.com/datameet/quest">GitHub</a></li>	
-					            <li>Creating example JSON - Emai me</li>	
-					            <li>By being early publisher - Emai me</li>
+					            <li>Creating example JSON - Email me</li>	
+					            <li>By being early publisher - Email me</li>
 					             <li>Sharing - <a href="http://quest.datameet.org">quest.datameet.org</a></li>
+					             <li>Like any Data{Meet} project, its FOSS</li>
 				            </ui>
 
 				</section>
