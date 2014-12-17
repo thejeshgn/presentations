@@ -160,7 +160,7 @@ http://anandology.com/
             </pre>
 					</section>
 					
-          <section>
+          					<section>
             <pre>
 On Tuesday, September 23, 2014 1:23:32 PM UTC+5:30, Raphael Susewind wrote:
 
@@ -178,92 +178,140 @@ Raphael
 					</section>          			
 				</section>
 
-      <section>
-        <section>
-          <h1>Solution</h1>
-          <h3>Communication</h3>
-        </section>
-        <section>
-          <h2>Solution</h2>
-          <ol>
-          <li> Allow creators to communicate to middleman</li>
-          <li> Middleman will publish the data and provide searh engine</li>
-          <li> Users will use search engine</li>
-          </ol>
-        </section>
-        <section>
-          <h2>Simple</h2>
-        </section>
-        <section>
-          <h2>Not really</h2>
-          <ul>
-            <li> Format for communicating metadata - OpenData.json - Similar to Google sitemap, but json
-            <li> Way to receive the that - Standard Ping (used by Google, Wordpress etc)
-            <li> Many things to Research
-            <li> Many things to Build
-          </ul>
-        </section>
-        </section>
+			      <section>
+				        <section>
+					          <h1>Solution</h1>
+					          <h3>Communication</h3>
+				        </section>
+				        <section>
+					          <h2>Solution</h2>
+					          <ol>
+					          <li> Allow creators to communicate to middleman</li>
+					          <li> Middleman will publish the data and provide searh engine</li>
+					          <li> Users will use search engine</li>
+					          </ol>
+				        </section>
+				        <section>
+				          	<h2>Simple</h2>
+				        </section>
+				        <section>
+					          <h2>Not really</h2>
+					          <ul>
+					            <li> Format for communicating metadata - OpenData.json - Similar to Google sitemap, but json
+					            <li> Way to receive the that - Standard Ping (used by Google, Wordpress etc)
+					            <li> Many things to Research
+					            <li> Many things to Build
+					          </ul>
+				        </section>
+			        </section>
         
-        
-    
-      <section>
-        <section>
-          <h1>Solution</h1>
-          <h2><a href="http://quest.datameet.org/">Quest</a></h2>
-        </section>
-        <section>
-        <h2>Research</h2>
-          <ul>
-            <li> Put the idea infront of the world - <a href="https://thejeshgn.com/2014/11/27/opendata-json-format-for-making-open-data-discoverable/">opendata.json – Format for making Open Data Discoverable</a>
-            <li> Similar projects by US Gov, OK etc
-            <li> Adopt or start from the scratch - Clone or Fork FOSS way - Reuse - Discussions on <a href="https://datameet.hackpad.com/">Hackpad</a>
-          </ul>
-        </section>        
-        <section>
-        <h2>Block diagram</h2>
-        </section>
-        <section>
-        <h2>Creator</h2>
-        </section>        
-        <section>
-        <h2>Validator</h2>
-        </section>
-        <section>
-        <h2>Ping Receiver</h2>
-        </section>
-       <section>
-        <h2>Analyzer</h2>
-        </section>
-       <section>
-        <h2>Publish</h2>
-        </section>
-        <section>
-        <h2>Search</h2>
-        </section>
-        <section>
-        <h2>Community</h2>
-        </section>
-      </section>
 
-  
-  
-  
-  
-  
-  
-  
+			      <section>
+				        <section>
+					          	<h1>Solution</h1>
+				          		<h2><a href="http://quest.datameet.org/">Quest</a></h2>
+				        </section>
+				        <section>
+					        <h2>Research</h2>
+					          <ul>
+					            <li> Put the idea infront of the world - <a href="https://thejeshgn.com/2014/11/27/opendata-json-format-for-making-open-data-discoverable/">opendata.json – Format for making Open Data Discoverable</a></li>
+					            <li> Similar projects by US Gov, OK etc</li>
+					            <li> Adopt or start from the scratch - Clone or Fork FOSS way - Reuse - Discussions on <a href="https://datameet.hackpad.com/opendata.json-cxod9ZH44Hl">Hackpad</a></li>
+					            <li> Standard Vocabulary by GoI </li>
+					          </ul>
+				        </section>
+				        <section>
+					        <h2>Format</h2>
+					          <ul>
+					            <li>Forked - <a href="https://project-open-data.cio.gov/v1.1/schema/">Project Open Data Metadata Schema v1.1</a>
+					            <li>JSON, JSONLD</li>
+					            <li> Well Researched, Public Domain, Already in use</li>	
+					            <li> http://quest.datameet.org/schema/v1.1/catalog.jsonld </li>
+					            <li> http://quest.datameet.org/schema/v1.1/dataset.json </li>
+					            <li> http://quest.datameet.org/schema/v1.1/distribution.json </li>
+					          </ul>
+				        </section>                
+				          <section>
+				          	            <img src="schema-diagram.svg"/>
+				          </section>
+
+				        <section>
+				        <h2>System</h2>
+				        <img src="quest.png" />
+				        </section>
+				        <section>
+				        <h2>Creator</h2>
+					            <ul>
+					            <li>Purpose: Make it easy for the data publishers to create JSON files</li>	
+					            <li>Online form based system to create the JSON files, like</li>
+					            <li>Offline - Excel based form to create the JSON files</li>
+					            <li>Python and/or PHP libraries to include as part of your services </li>
+					            </ui>
+				        </section>        
+				        <section>
+					        <h2>Validator</h2>
+					            <ul>
+					            <li>Purpose: Make it easy for the data publishers to validate JSON files</li>	
+					            <li>Online form based system to validate the JSON files</li>
+					            <li>API End point to receive and validate the JSON</li>
+					            <li>Python and/or PHP libraries to include as part of your services </li>
+					            </ui>
+				        </section>
+				        <section>
+					        <h2>Ping Receiver</h2>
+					            <ul>
+					            <li>Purpose: Make it easy for the data publishers to send us updates</li>	
+					            <li>Online form based system to receive the ping</li>
+					            <li>API End point to receive the ping</li>
+					            <li>Python and/or PHP libraries to include as part of your services </li>
+					            </ui>
+				        </section>
+				       <section>
+					        <h2>Analyzer</h2>
+					            <ul>
+						            <li>Purpose: Inernal, once you receive the file, analyze and insert into DB</li>	
+					            </ui>
+				        </section>
+				       <section>
+				        <h2>Publish</h2>
+					            <ul>
+						            <li>Purpose: Make it easy for the users to view catalog, dataset</li>	
+						            <li>Online, UI based</li>	
+					            </ui>				        
+				        </section>
+				        <section>
+				        <h2>Search</h2>
+				  		<ul>
+						            <li>Purpose: Make it easy for the users to find data set</li>	
+						            <li>Search based on Source org, License, Geography etc</li>	
+						            <li>Online, UI based</li>
+						            <li>API</li>	
+					            </ui>
+				        </section>
+				        <section>
+				        <h2>Community</h2>
+				  		<ul>
+						            <li>Purpose: Enhance the quality, include community</li>	
+						            <li>Curation, Rate, Mark as spam etc</li>	
+						            <li>Online, UI based</li>
+					            </ui>
+
+				        </section>
+			      </section>
 				<section>
-					<h2>Attributions</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Reveal.js</a></li>
-						<li>Wifi by <a href="http://www.thenounproject.com/wilsonjoseph">Wilson Joseph</a>, Door by <a href="http://www.thenounproject.com/anasr">Anas Ramadan</a>, Telephone by <a href="http://www.thenounproject.com/edward">Edward Boatman</a>, Computer by <a href="http://www.thenounproject.com/iconoci">iconoci</a>, Data Analysis by <a href="http://www.thenounproject.com/bnvk">Brennan Novak</a>, Control by <a href="http://www.thenounproject.com/Deadtype">DEADTYPE</a>, Texting by <a href="http://www.thenounproject.com/4lbatroz">San Salido Martínez</a> and Phones Prohibited by <a href="http://www.thenounproject.com/SimpleIcons">Simple Icons</a>, Diversity by <a href="http://www.thenounproject.com/Luis">Luis Prado</a>, Map by <a href="http://www.thenounproject.com/pjsmits">Pieter J. Smits</a> ,India by <a href="http://www.thenounproject.com/merdesign">Monika Ciapala</a>, Couple designed by <a href="http://www.thenounproject.com/notnarayan">Shankar Narayan</a>, Tape Measure designed by <a href="http://www.thenounproject.com/gemma.garner">Gemma Garner</a>,  Question designed by <a href="http://www.thenounproject.com/Icons8">Icons8</a>, Dice designed by <a href="http://www.thenounproject.com/imryanreid">Ryan Reid</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
-						</li>
-					</ul>
+					<h2>Contribute</h2>
+			  		<ul>
+					            <li>Writing code, <a href="https://github.com/datameet/quest">GitHub</a></li>	
+					            <li>Creating example JSON - Emai me</li>	
+					            <li>By being early publisher - Emai me</li>
+					             <li>Sharing - <a href="http://quest.datameet.org">quest.datameet.org</a></li>
+				            </ui>
+
 				</section>
+  
 
 				<section>
-					<h1>Thank You</h1>
+					<h2>Thank You</h2>
 					<h3>BY Thejesh GN / <a href="http://thejeshgn.com">thejeshgn.com</a></h3>
 					<iframe class="stretch" width="640" height="360" src="https://www.youtube-nocookie.com/embed/vXr-2hwTk58?rel=0" frameborder="0" allowfullscreen></iframe>
 					<p> Watch this movie when you find time. Thank you.</p>
