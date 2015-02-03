@@ -91,19 +91,19 @@
 					<center><div id="genre_viz"></div></center>
 					<script>
 					  var genre_data = [
-						 {"name": "Arabic","value":7, "color":"15"},
+						 {"name": "Arabic","value":7},
 						 {"name": "Bhajan","value":5},
-						 {"name": "Bhangra","value":37, "color":"8"},
+						 {"name": "Bhangra","value":37},
 						 {"name": "Carribean","value":1},
 						 {"name": "Carnatic","value":2},
 						 {"name": "Chants","value":3},
-						 {"name": "Classic Pop","value":8, "color":"14"},
-						 {"name": "Electronic","value":75, "color":"7"},
-						 {"name": "Filmi","value":581, "color":"1"},
+						 {"name": "Classic Pop","value":8},
+						 {"name": "Electronic","value":75},
+						 {"name": "Filmi","value":581},
 						 {"name": "Ghazal","value":2},
-						 {"name": "Hindi Folk","value":29, "color":"6"},
-						 {"name": "Hindustani","value":10, "color":"13"},
-						 {"name": "Hip-hop","value":32,"color":"9"},
+						 {"name": "Hindi Folk","value":29},
+						 {"name": "Hindustani","value":10},
+						 {"name": "Hip-hop","value":32},
 						 {"name": "Jazz","value":4},
 						 {"name": "Kashmiri Folk","value":1},
 						 {"name": "Latin","value":1},
@@ -112,18 +112,18 @@
 						 {"name": "Medley","value":1},
 						 {"name": "Narration","value":2},
 						 {"name": "New Age","value":2},
-						 {"name": "Other","value":21,"color":"10"},
+						 {"name": "Other","value":21},
 						 {"name": "Pahadi","value":1},
-						 {"name": "Pop","value":359, "color":"2"},
-						 {"name": "Punjabi Folk","value":19,"color":"12"},
-						 {"name": "Rajasthani Folk","value":8, "color":"16"},
-						 {"name": "Rock","value":56, "color":"4"},
+						 {"name": "Pop","value":359},
+						 {"name": "Punjabi Folk","value":19},
+						 {"name": "Rajasthani Folk","value":8},
+						 {"name": "Rock","value":56},
 						 {"name": "Spanish","value":1},
-						 {"name": "Sufi/Qawwali","value":30, "color":"5"},
-						 {"name": "Sugam","value":90, "color":"3"},
+						 {"name": "Sufi/Qawwali","value":30},
+						 {"name": "Sugam","value":90},
 						 {"name": "Western Classical","value":3},
 						 {"name": "Western Folk","value":3}
-					  ]
+					  ];
 
 					  // instantiate d3plus
 					  var visualization = d3plus.viz().height(600).width(900)
@@ -132,7 +132,7 @@
 					    .type("tree_map")   // visualization type
 					    .id("name")         // key for which our data is unique on
 					    .size("value")      // sizing of blocks					 
-					    //.color('color')
+					    .font({ "family": "Impact" })
 					    .draw()             // finally, draw the visualization!
 
 					</script>
