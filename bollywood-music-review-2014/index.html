@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<meta charset="utf-8">
 
 	<head>
 		<meta charset="utf-8">
@@ -17,19 +17,13 @@
 		<link rel="stylesheet" href="../media/revealjs/css/reveal.min.css">
 		<link rel="stylesheet" href="../media/revealjs/css/theme/solarized.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../media/revealjs/lib/css/zenburn.css">
+		
+		<!-- load D3js -->
+		<script src="../media/d3plus/js/d3.js"></script>
+		 
+		<!-- load D3plus after D3js -->
+		<script src="../media/d3plus/js/d3plus.js"></script>
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '../media/revealjs/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -92,6 +86,96 @@
 					<h1>&asymp;7 Songs per Film</h1>
 				</section>
 				
+				<section>
+					<h2>Genres</h2>
+					<center><div id="genre_viz"></div></center>
+					<script>
+					  var genre_data = [
+						 {"name": "Arabic","value":7, "color":"15"},
+						 {"name": "Bhajan","value":5},
+						 {"name": "Bhangra","value":37, "color":"8"},
+						 {"name": "Carribean","value":1},
+						 {"name": "Carnatic","value":2},
+						 {"name": "Chants","value":3},
+						 {"name": "Classic Pop","value":8, "color":"14"},
+						 {"name": "Electronic","value":75, "color":"7"},
+						 {"name": "Filmi","value":581, "color":"1"},
+						 {"name": "Ghazal","value":2},
+						 {"name": "Hindi Folk","value":29, "color":"6"},
+						 {"name": "Hindustani","value":10, "color":"13"},
+						 {"name": "Hip-hop","value":32,"color":"9"},
+						 {"name": "Jazz","value":4},
+						 {"name": "Kashmiri Folk","value":1},
+						 {"name": "Latin","value":1},
+						 {"name": "Marathi Folk","value":1},
+						 {"name": "Marching Band","value":1},
+						 {"name": "Medley","value":1},
+						 {"name": "Narration","value":2},
+						 {"name": "New Age","value":2},
+						 {"name": "Other","value":21,"color":"10"},
+						 {"name": "Pahadi","value":1},
+						 {"name": "Pop","value":359, "color":"2"},
+						 {"name": "Punjabi Folk","value":19,"color":"12"},
+						 {"name": "Rajasthani Folk","value":8, "color":"16"},
+						 {"name": "Rock","value":56, "color":"4"},
+						 {"name": "Spanish","value":1},
+						 {"name": "Sufi/Qawwali","value":30, "color":"5"},
+						 {"name": "Sugam","value":90, "color":"3"},
+						 {"name": "Western Classical","value":3},
+						 {"name": "Western Folk","value":3}
+					  ]
+
+					  // instantiate d3plus
+					  var visualization = d3plus.viz().height(600).width(900)
+					    .container("#genre_viz")  //
+					    .data(genre_data)  // data to use with the visualization
+					    .type("tree_map")   // visualization type
+					    .id("name")         // key for which our data is unique on
+					    .size("value")      // sizing of blocks					 
+					    //.color('color')
+					    .draw()             // finally, draw the visualization!
+
+					</script>
+				</section>
+				<section>
+					<h1>100 Composers</h1>
+				</section>
+				<section>
+					<h2>Prolific Composers</h2>
+				</section>
+				<section>
+					<h2>Popular Composers</h2>
+				</section>
+
+				<section>
+					<h1>300 Singers</h1>
+
+				</section>
+				<section>
+					<h2>Prolific Singers</h2>
+
+				</section>
+				<section>
+					<h2>Popular Singers</h2>
+
+				</section>
+
+				<section>
+					<h1>200 Lyricists</h1>
+
+				</section>
+				<section>
+					<h2>Prolific Lyricists</h2>
+
+				</section>
+				<section>
+					<h2>Popular Lyricists</h2>
+
+				</section>
+				<section>
+					<h1>Popular Songs</h1>
+
+				</section>
 				<section>
 					<h2>Thank You</h2>
 					<p>
