@@ -74,6 +74,57 @@
 Created Friday 06 February 2015
 </p>
 
+<h2>Character Encoding</h2>
+
+<p>
+The charset attribute specifies the character encoding for the HTML document. Since our content is going to be in UTF-8 we will define the charset as UTF-8. UTF-8 can also handles ASCII. And hence the mixed content of UTF-8 and ASCII in the document renders well when the charset is defined as UTF-8.  Below I have example code to define the charset and also the screenshots of broswer displaying the same content with charset not defined  and defined as UTF-8.
+</p>
+
+<pre>
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+</pre>
+
+<p>
+Or you can use the old way
+</p>
+
+<pre>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+</pre>
+
+<p>
+<img src="./4_-_HTML_Web_Apps/utf8_encoding.png">
+</p>
+
+<h2>Ordered Lists</h2>
+
+<p>
+Support for Indic based order lists are very browser specific. But most modern browsers support it. Its done using <i>list-style-type</i> CSS attribute. For example setting list-style-type to kannada will produce list numbering as described in the CSS3 Lists module and displays Kannada numerals.  Quite a few Indian languages like Kannada, Telugu, Tamil, Malayalm, Devnagari, Bengali etc are supported. Below I have demo code and rendering of the same in browser
+</p>
+
+<pre>
+&lt;ol style="list-style-type:kannada"&gt;
+&lt;li&gt;First&lt;/li&gt;
+&lt;li&gt;Second&lt;/li&gt;
+&lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol style="list-style-type:devanagari"&gt;
+&lt;li&gt;First&lt;/li&gt;
+&lt;li&gt;Second&lt;/li&gt;
+&lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol style="list-style-type:hindi"&gt;
+&lt;li&gt;First&lt;/li&gt;
+&lt;li&gt;Second&lt;/li&gt;
+&lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<p>
+<img src="./4_-_HTML_Web_Apps/indic_ordered_list.png">
+</p>
 
                 <br>
                 <span class="backlinks">
