@@ -1,0 +1,238 @@
+<!doctype html>
+<meta charset="utf-8">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bollywood Music Review - 2014 - Thejesh GN - MySwar</title>
+
+		<meta name="description" content="Bollywood Music Review - 2014 by Thejesh GN at MySwar. Myswar is the complete guide to Hindi film music.">
+		<meta name="author" content="Thejesh GN">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="../media/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../media/revealjs/css/reveal.min.css">
+		<link rel="stylesheet" href="../media/revealjs/css/theme/solarized.css" id="theme">
+
+		
+		<!-- load D3js -->
+		<script src="../media/d3plus/js/d3.js"></script>
+		 
+		<!-- load D3plus after D3js -->
+		<script src="../media/d3plus/js/d3plus.js"></script>
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.localimg{
+			border:0px;
+			box-shadow:0 0 0px;
+		}
+		.reveal i.fa { font-family:FontAwesome; font-style: normal; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="icon-bar" >
+				<p><small>&nbsp;&nbsp;&nbsp;&nbsp;<a class="menu right" onclick="Reveal.toggleOverview();"><i class="fa fa-th"></i></a></small></p>
+		    </div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">				
+				<section>
+					<h1>Bollywood Music Review</h1>
+					<h3>2014</h3>
+					<p>
+						<small>by <br> <br><a href="http://thejeshgn.com">Thejesh GN</a></a></small>
+					</p>
+					<p> 
+						<a href="http://myswar.com"><img src="./myswar.png" width="300px" style="border:0px;box-shadow:0 0 0px;"></a>
+					</p>
+
+				</section>
+
+				<section>
+					<h2><a href="http://myswar.com/">Myswar</a></h2>
+					<p>
+						MySwar is the complete guide to Hindi film music. 
+					</p>
+					<p>MySwar has film credits, reviews, artist bios, trivia, awards.
+					</p>
+					<p>	
+					 You can rate songs, get song recommendations, contribute reviews, trivia, awards information, watch YouTube videos and buy songs.
+					</p>
+					<p><a href="http://myswar.com" target="_new"><i class="fa fa-anchor"></i></a>&nbsp;&nbsp;<a href="https://twitter.com/myswar" target="_new"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/MySwarDotCom" target="_new"><i class="fa fa-facebook"></i>&nbsp;&nbsp;<a href="http://mavrix.in" target="_new"><i class="fa fa-wordpress"></i></a></p>
+				</section>
+				<section>
+					<h1>2014 in Numbers</h1>
+				</section>
+				<section>
+					<h1><a href="http://myswar.com/album/year/2014" target="_new">142 Films</a></h1>
+					<center><img src="Bollywood-Last-three-years-Albums_chartbuilder.svg" style="border:0px;box-shadow:0 0 0px;" width="800"  /></center>
+				</section>
+				<section>
+					<h1><a href="http://myswar.com/advanced-search?album_type=film&album_artist=%5B%5D&singer=%5B%5D&composer=%5B%5D&lyricist=%5B%5D&from_year=%222014%22&to_year=%222014%22&genres=%5B%5D&film_director=%5B%5D&film_producer=%5B%5D&film_writer=%5B%5D&film_actor=%5B%5D&production_house=%5B%5D&pagid=1" target="_new">982 Songs</a></h1>
+					<center><img src="Bollywood-Last-three-years-Songs_chartbuilder.svg" style="border:0px;box-shadow:0 0 0px;" width="800"  /></center>
+
+				</section>
+				<section>
+					<h1>&asymp;7 Songs per Film</h1>
+				</section>
+				
+				<section>
+					<h2>Genres</h2>
+					<center><div id="genre_viz"></div></center>
+					<script>
+					  var genre_data = [
+						 {"name": "Arabic","value":7},
+						 {"name": "Bhajan","value":5},
+						 {"name": "Bhangra","value":37},
+						 {"name": "Carribean","value":1},
+						 {"name": "Carnatic","value":2},
+						 {"name": "Chants","value":3},
+						 {"name": "Classic Pop","value":8},
+						 {"name": "Electronic","value":75},
+						 {"name": "Filmi","value":581},
+						 {"name": "Ghazal","value":2},
+						 {"name": "Hindi Folk","value":29},
+						 {"name": "Hindustani","value":10},
+						 {"name": "Hip-hop","value":32},
+						 {"name": "Jazz","value":4},
+						 {"name": "Kashmiri Folk","value":1},
+						 {"name": "Latin","value":1},
+						 {"name": "Marathi Folk","value":1},
+						 {"name": "Marching Band","value":1},
+						 {"name": "Medley","value":1},
+						 {"name": "Narration","value":2},
+						 {"name": "New Age","value":2},
+						 {"name": "Other","value":21},
+						 {"name": "Pahadi","value":1},
+						 {"name": "Pop","value":359},
+						 {"name": "Punjabi Folk","value":19},
+						 {"name": "Rajasthani Folk","value":8},
+						 {"name": "Rock","value":56},
+						 {"name": "Spanish","value":1},
+						 {"name": "Sufi/Qawwali","value":30},
+						 {"name": "Sugam","value":90},
+						 {"name": "Western Classical","value":3},
+						 {"name": "Western Folk","value":3}
+					  ];
+
+					  // instantiate d3plus
+					  var visualization = d3plus.viz().height(600).width(900)
+					    .container("#genre_viz")  //
+					    .data(genre_data)  // data to use with the visualization
+					    .type("tree_map")   // visualization type
+					    .id("name")         // key for which our data is unique on
+					    .size("value")      // sizing of blocks					 
+					    .font({ "family": "Impact" })
+					    .draw()             // finally, draw the visualization!
+
+					</script>
+				</section>
+				<section>
+					<h1>100 Composers</h1>
+				</section>
+				<section>
+					<h2>Prolific Composers</h2>
+				</section>
+				<section>
+					<h2>Popular Composers</h2>
+				</section>
+
+				<section>
+					<h1>300 Singers</h1>
+
+				</section>
+				<section>
+					<h2>Prolific Singers</h2>
+
+				</section>
+				<section>
+					<h2>Popular Singers</h2>
+
+				</section>
+
+				<section>
+					<h1>200 Lyricists</h1>
+
+				</section>
+				<section>
+					<h2>Prolific Lyricists</h2>
+
+				</section>
+				<section>
+					<h2>Popular Lyricists</h2>
+
+				</section>
+				<section>
+					<h1>Popular Songs</h1>
+
+				</section>
+				<section>
+					<h2>अब हिन्दी में भी</h2>
+					<a href="http://myswar.com/language/Hindi"><img src="mobile_app_banner.jpg" style="border:0px;box-shadow:0 0 0px;"/></a>
+					<a href="https://itunes.apple.com/app/myswar/id622503117?ls=1&mt=8"><img src="ios_badge.png" height="45px" style="border:0px;box-shadow:0 0 0px;"/></a><a href="https://play.google.com/store/apps/details?id=com.mavrix.myswar"><img src="android_app.png" height="45px" style="border:0px;box-shadow:0 0 0px;"/></a>
+				</section>
+
+
+				<section>
+					<h2>Thank You</h2>
+					<p>
+						I am <a href="http://thejeshgn.com">Thejesh GN</a>, Technologist from Bangalore.
+					</p>
+					<p>
+						Tech Architect at <a href="http://myswar.com">Mavrix</a>.
+					</p>
+					<p>
+						<a href="https://twitter.com/thej" target="_new"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;<a href="http://thejeshgn.com" target="_new"><i class="fa fa-wordpress"></i></a>
+					</p>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="../media/revealjs/lib/js/head.min.js"></script>
+		<script src="../media/revealjs/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				//theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				//transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../media/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../media/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../media/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../media/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../media/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../media/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

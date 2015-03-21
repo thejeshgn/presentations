@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  <svg id="chart" width="600" height="172" style="font-size: 14px;" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs xmlns="http://www.w3.org/1999/xhtml">
+      <style type="text/css">
+        <![CDATA[[object Object]]]>
+      </style>
+    </defs>
+      <rect id="ground" width="600" height="172" style="fill: rgb(255, 255, 255); stroke: none; opacity:0;"/>
+      <rect id="plotArea" width="534.8125" height="66" transform="translate(55.1875,56)" style="fill: none; stroke: none;"/>
+      <g class="axis yAxis" id="rightAxis" transform="translate(10,0)" style="display: none;">
+        <g transform="translate(0,55.1875)" class="zero topAxisItem" style="opacity: 1;">
+          <line class="tick" x2="580" y2="0" stroke="#E6E6E6" style="fill: none; shape-rendering: crispedges; stroke: rgb(102, 102, 102);"/>
+          <text x="580" y="-9" dy=".32em" text-anchor="end" fill="#666666" style="font-family: Cutive, Helvetica, sans-serif;">0</text>
+        </g>
+        <g transform="translate(0,224.109375)" style="opacity: 1;">
+          <line class="tick" x2="580" y2="0" stroke="#E6E6E6" style="fill: none; shape-rendering: crispedges;"/>
+          <text x="580" y="-9" dy=".32em" text-anchor="end" fill="#666666" style="font-family: Cutive, Helvetica, sans-serif;">333</text>
+        </g>
+        <g transform="translate(0,393.03125)" style="opacity: 1;">
+          <line class="tick" x2="580" y2="0" stroke="#E6E6E6" style="fill: none; shape-rendering: crispedges;"/>
+          <text x="580" y="-9" dy=".32em" text-anchor="end" fill="#666666" style="font-family: Cutive, Helvetica, sans-serif;">667</text>
+        </g>
+        <g transform="translate(0,561.953125)" style="opacity: 1;">
+          <line class="tick" x2="580" y2="0" stroke="#E6E6E6" style="fill: none; shape-rendering: crispedges;"/>
+          <text x="580" y="-9" dy=".32em" text-anchor="end" fill="#666666" style="font-family: Cutive, Helvetica, sans-serif;">1,000</text>
+        </g>
+        <path class="domain" d="M580,55.1875H0V561.953125H580" style="stroke: none; fill: none;"/>
+      </g>
+      <defs xmlns="http://www.w3.org/1999/xhtml">
+        <style type="text/css">
+      </style>
+    </defs>
+      <defs xmlns="http://www.w3.org/1999/xhtml">
+        <style type="text/css">
+      </style>
+    </defs>
+      <defs xmlns="http://www.w3.org/1999/xhtml">
+        <style type="text/css">
+      </style>
+    </defs>
+      <text y="19" x="10" id="titleLine" style="font-family: Cutive, Helvetica, sans-serif; fill: rgb(102, 102, 102);"></text>
+      <g class="axis" id="xAxis" transform="translate(55.1875,0)" style="fill: rgb(102, 102, 102);">
+        <g transform="translate(0,87)" style="opacity: 1;">
+          <line class="tick" y2="0" x2="-6" style="fill: none; shape-rendering: crispedges; stroke: rgb(230, 230, 230);"/>
+          <text y="0" x="-9" dy=".32em" text-anchor="end" style="font-family: Cutive, Helvetica, sans-serif;">2013</text>
+        </g>
+        <g transform="translate(0,122)" style="opacity: 1;">
+          <line class="tick" y2="0" x2="-6" style="fill: none; shape-rendering: crispedges; stroke: rgb(230, 230, 230);"/>
+          <text y="0" x="-9" dy=".32em" text-anchor="end" style="font-family: Cutive, Helvetica, sans-serif;">2014</text>
+        </g>
+        <g transform="translate(0,52)" style="opacity: 1;">
+          <line class="tick" x2="-6" y2="0" style="fill: none; shape-rendering: crispedges; stroke: rgb(230, 230, 230);"/>
+          <text x="-9" y="0" dy=".32em" text-anchor="end" style="font-family: Cutive, Helvetica, sans-serif;">2012</text>
+        </g>
+        <path class="domain" d="M-6,52H0V122H-6" style="stroke: none; fill: none;"/>
+      </g>
+      <g id="seriesContainer">
+        <g class="seriesColumn" fill="#BF0053" style="opacity:0.5;" transform="translate(0,0)">
+          <rect y="42" x="55.1875" height="20" width="427.203421875"/>
+          <rect y="77" x="55.1875" height="20" width="506.25885937499993"/>
+          <rect y="112" x="55.1875" height="20" width="497.64384375"/>
+          <text class="bargridLabel" y="38" x="55.1875" style="font-family: Cutive, Helvetica, sans-serif;"></text>
+          <text class="barLabel" y="55.50390625" x="486.390921875" style="font-family: Cutive, Helvetica, sans-serif;">843</text>
+          <text class="barLabel" y="90.50390625" x="565.4463593749999" style="font-family: Cutive, Helvetica, sans-serif;">999</text>
+          <text class="barLabel" y="125.50390625" x="556.83134375" style="font-family: Cutive, Helvetica, sans-serif;">982</text>
+        </g></g>
+        <g id="legendItemContainer"/>
+        <g id="metaInfo" transform="translate(0,168)">
+          <text text-anchor="end" x="590" class="metaText" style="font-family: Cutive, Helvetica, sans-serif; font-size: 10px; text-rendering: optimizelegibility; fill: rgb(153, 153, 153);"></text>
+          <text x="10" class="metaText" style="font-family: Cutive, Helvetica, sans-serif; font-size: 10px; text-rendering: optimizelegibility; fill: rgb(153, 153, 153);"/>
+        </g>
+      </svg>
