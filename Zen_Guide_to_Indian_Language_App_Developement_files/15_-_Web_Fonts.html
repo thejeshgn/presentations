@@ -75,11 +75,52 @@ Created Saturday 07 February 2015
 </p>
 
 <p>
-Web fonts refers to fonts used on the website which are automatically downloaded in the browser and used to render the website. 
+Web fonts refers to fonts used on the website which are automatically downloaded in the browser and used to render the website.  This has been made possible using <span class="zim-tag">@font</span>-face css tag. All most all the modern desktop and mobile browsers support this.
+</p>
+
+<div class="zim-object">
+<pre class="brush: html;">
+&lt;style&gt;
+@font-face {
+	font-family: myFirstFont;
+	src: url(sansation_light.woff);
+}
+
+body {
+	font-family: myFirstFont;
+}
+&lt;/style&gt;</pre>
+</div>
+
+<p>
+There are hosted providers of web fonts. You can also host for yourself. We will see some examples
+</p>
+
+<h2>Google Web Fonts</h2>
+
+<p>
+<a href="http://www.google.com/fonts" title="Google Web Fonts" class="http">Google Web Fonts</a> serves some of the open source fonts as web fonts. Its probably the most easiest way to use different fonts on a web project. Just select the font, font size and the page provides you with CSS snippet. Just include that in your HTML and use it in your styles. Some of the Indic fonts (Most based on Nato Sans) are avaiable as <a href="http://www.google.com/fonts/earlyaccess" title="part of early access" class="http">part of early access</a>.  Hopefully they will become part of regular font distribution soon.
 </p>
 
 <p>
-<span class="zim-tag">@font</span>-face
+For example, for Kannada which is part of early acess
+</p>
+<div class="zim-object">
+<pre class="brush: html;">
+&lt;head&gt;
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+&lt;style&gt;
+body {
+font-family: 'Noto Sans Kannada', serif;
+}
+&lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+
+<h2>FONT Squirrel - Web Font Generator</h2>
+
+<p>
+ <a href="http://www.fontsquirrel.com/tools/webfont-generator" title="Web Font Generator" class="http">Web Font Generator</a> is a service provided by FONT Squirrel. You can upload your fonts here and then download the set of font files and css files which are ready to be uploaded to the server. Once you upload the file to a web accessible server. Include the CSS in your HTML and use it like a hosted font. This is really useful for those custom fonts that you have and want to use on the web.
 </p>
 
                 <br>
@@ -109,6 +150,5 @@ Web fonts refers to fonts used on the website which are automatically downloaded
   })();
 
 </script>
-
 </body>
 </html>
